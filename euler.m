@@ -6,5 +6,7 @@ function [ R ] = euler( f, a, b, y0, h, M )
 	for k = 1: M
 		Y( k + 1 ) = Y( k ) + h*feval( f, T( k ), Y( k ) );
 	endfor;
-	R = [ T' Y' ];
+  R = Y';
+  
+	%R = [ T' Y' ];
 endfunction

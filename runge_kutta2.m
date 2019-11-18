@@ -7,5 +7,6 @@ function [ R ] = runge_kutta2( f, a, b, y0, h, M )
     k2 = h*feval( f, T( k ) + h, Y( k ) );
     Y( k + 1 ) = Y( k ) + ( k1 + k2 ) / 2;
   endfor
-  R = [ T' Y' ];
+%  R = [ T' Y' ];
+  R = Y';
 endfunction

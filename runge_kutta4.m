@@ -12,6 +12,5 @@ function [ R ] = runge_kutta4( f, a, b, y0, h, M )
     Y( k + 1 ) = Y( k ) + ( k1 + 2*k2 + 2*k3 + k4 ) / 6;
   endfor
 
- % R = [ T' Y' ];
-  R = Y';
+ R = [ T' Y' ];
 endfunction
